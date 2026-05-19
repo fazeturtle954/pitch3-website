@@ -40,7 +40,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 16px 24px; max-width: var(--max); margin: 0 auto;
 }
 .brand {
-  font-weight: 900; letter-spacing: -1px; font-size: 22px;
+  font-weight: 900; letter-spacing: -1.5px; font-size: 32px;
 }
 .brand span { color: var(--sky); }
 .nav-links {
