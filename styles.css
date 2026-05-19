@@ -104,6 +104,18 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
+/* real media (img/video) — replaces the placeholder slot once wired */
+.media {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+.media.wide { aspect-ratio: 16/9; }
+.media.tall { aspect-ratio: 3/4; }
+.media.square { aspect-ratio: 1; }
+
 /* media slot placeholder — clear to user where to drop content */
 .media-slot {
   background: #f4f4f4;
