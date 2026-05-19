@@ -168,6 +168,63 @@ button { font-family: inherit; cursor: pointer; }
 .media-slot.tall { aspect-ratio: 3/4; }
 .media-slot.square { aspect-ratio: 1; }
 
+/* ===== GUARANTEE BAND ===== */
+.guarantee {
+  background: var(--ink);
+  color: #fff;
+  padding: 70px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.guarantee-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.guarantee-num {
+  font-size: clamp(80px, 12vw, 160px);
+  font-weight: 900;
+  color: var(--sky);
+  letter-spacing: -6px;
+  line-height: 0.85;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.guarantee-unit {
+  font-size: clamp(20px, 2.4vw, 32px);
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: var(--sky);
+  margin-left: 4px;
+}
+.guarantee-eyebrow {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--sky);
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.guarantee-line {
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  margin-bottom: 14px;
+}
+.guarantee-foot {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 720px) {
+  .guarantee { padding: 44px 0; }
+  .guarantee-inner { grid-template-columns: 1fr; gap: 18px; }
+  .guarantee-num { letter-spacing: -4px; }
+}
+
 /* ===== STATS ===== */
 .stats {
   display: grid; grid-template-columns: repeat(3, 1fr);
