@@ -52,6 +52,8 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--ink-soft); transition: color .15s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links .btn { color: #fff; }
+.nav-links .btn:hover { color: #fff; }
 .btn {
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--ink); color: #fff;
