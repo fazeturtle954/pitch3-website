@@ -8,7 +8,7 @@ Hey — built this while you were AFK, per your "approve stuff and do as u recom
 
 - `index.html` — Home (hero, stats, two-path In-Person vs Virtual, coach intro, MLB picks, quote, CTA)
 - `in-person.html` — All 4 program tiers (Youth / Elite / College / Pro), weekly system, tech stack
-- `virtual.html` — "Now in Development · Inquire" framing + 5 tiers (Youth / Elite / College / Pro / **Strength Training**)
+- `virtual.html` — "Now in Development · Inquire" framing + 4 tiers (Youth / Elite / College / Pro)
 - `about.html` — Coach Kyle bio, credentials, MLB-player social proof, quote
 - `styles.css` — Shared styles: white + deep navy (`#0a1733`) + sky blue accent (`#4ea8ff`), bold modern athletic
 - `docs/superpowers/specs/2026-05-18-pitch3-redesign-design.md` — Full design spec
@@ -67,7 +67,7 @@ When ready, I can:
 pitch3-redesign/
 ├── index.html         home
 ├── in-person.html     in-person training (4 tiers)
-├── virtual.html       virtual training (5 tiers incl. strength)
+├── virtual.html       virtual training (4 tiers)
 ├── about.html         coach bio
 ├── styles.css         all styles
 ├── assets/            (empty — drop IG media here)
