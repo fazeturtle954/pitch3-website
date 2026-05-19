@@ -54,12 +54,12 @@ button { font-family: inherit; cursor: pointer; }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); }
 .btn {
   display: inline-flex; align-items: center; gap: 6px;
-  background: var(--blue); color: #fff;
+  background: var(--sky); color: var(--blue);
   font-weight: 800; font-size: 14px; letter-spacing: .3px;
   padding: 11px 18px; border-radius: 6px;
-  border: none; transition: background .15s, transform .1s;
+  border: none; transition: background .15s, color .15s, transform .1s;
 }
-.btn:hover { background: var(--blue-dark); }
+.btn:hover { background: var(--blue); color: #fff; }
 .btn:active { transform: translateY(1px); }
 .btn-ghost {
   background: transparent; color: var(--ink);
