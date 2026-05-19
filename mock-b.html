@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOCK B — Framed Guarantee Card · PITCH3</title>
+<meta name="description" content="Mockup B: framed guarantee card on tinted background">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== MOCKUP PICKER ===== */
+.mock-picker {
+  background: #fff8d6; border-bottom: 2px solid #e8d370;
+  padding: 10px 24px; text-align: center;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+}
+.mock-picker a { margin: 0 10px; color: #6a5a00; text-decoration: underline; }
+.mock-picker a.active { color: #0a0a0a; }
+
+/* ===== GUARANTEE — MOCK B: Framed card ===== */
+.g-b {
+  background: var(--blue-tint);
+  padding: 80px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.g-b-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(10, 23, 51, 0.10);
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 8px 1fr;
+  overflow: hidden;
+}
+.g-b-stripe {
+  background: linear-gradient(180deg, var(--sky), #1e7ee0);
+}
+.g-b-body {
+  padding: 44px 50px 40px;
+}
+.g-b-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; font-weight: 800; letter-spacing: 3px;
+  color: var(--blue); text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.g-b-seal {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--sky); color: #fff; font-size: 13px; font-weight: 900;
+}
+.g-b-row {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 48px; align-items: center;
+}
+.g-b-num {
+  font-size: clamp(90px, 13vw, 170px);
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: -7px;
+  line-height: 0.85;
+  display: inline-flex; align-items: baseline;
+}
+.g-b-unit {
+  font-size: clamp(22px, 2.6vw, 36px);
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: var(--sky);
+  margin-left: 8px;
+}
+.g-b-text {
+  border-left: 2px solid var(--rule);
+  padding-left: 40px;
+}
+.g-b-line {
+  font-size: clamp(20px, 2.3vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.g-b-sub {
+  font-size: 15px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.g-b-checks {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  margin-top: 32px; padding-top: 26px;
+  border-top: 1px solid var(--rule);
+}
+.g-b-check {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; letter-spacing: 1px;
+  color: var(--ink-soft); text-transform: uppercase;
+}
+.g-b-check::before {
+  content: "✓"; color: var(--sky); font-size: 18px; font-weight: 900;
+}
+@media (max-width: 720px) {
+  .g-b { padding: 50px 0; }
+  .g-b-body { padding: 32px 24px 28px; }
+  .g-b-row { grid-template-columns: 1fr; gap: 18px; }
+  .g-b-text { border-left: none; border-top: 2px solid var(--rule); padding-left: 0; padding-top: 22px; }
+  .g-b-num { letter-spacing: -4px; }
+  .g-b-checks { gap: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="mock-picker">
+  MOCKUP COMPARE →
+  <a href="mock-a.html">A · Showcase Band</a>
+  <a href="mock-b.html" class="active">B · Framed Card</a>
+  <a href="mock-c.html">C · Split Hero</a>
+  <a href="index.html">↶ Current</a>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">PITCH<span>3</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="in-person.html">In-Person</a></li>
+      <li><a href="virtual.html">Virtual</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request">Book a Free Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip">ELITE PITCHING · FORT LAUDERDALE</span>
+      <h1 class="h1">Throw harder.<br>Hit your spots.<br><span class="accent">Get noticed.</span></h1>
+      <p class="lede">The system that adds real velocity to your fastball, sharpens your command, and builds the pitcher college and pro coaches actually call back. Max 4 per group. Built over 20 years at the pro level.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request">Book a Free 15-min Call →</a>
+        <a class="btn btn-ghost" href="in-person.html">See Programs</a>
+      </div>
+    </div>
+    <a class="media-link" href="https://www.instagram.com/kb3_baseball/" target="_blank" rel="noopener" data-ig-slot="hero-pitcher">
+      <img class="media wide fit" src="assets/hero-pitcher.jpg" alt="PITCH3 pitcher in delivery — Fort Lauderdale">
+    </a>
+  </div>
+</header>
+
+<!-- ===== MOCK B: Framed guarantee card ===== -->
+<section class="g-b">
+  <div class="wrap">
+    <div class="g-b-card">
+      <div class="g-b-stripe"></div>
+      <div class="g-b-body">
+        <div class="g-b-eyebrow"><span class="g-b-seal">★</span> THE PITCH3 GUARANTEE</div>
+        <div class="g-b-row">
+          <div class="g-b-num">+5<span class="g-b-unit">MPH</span></div>
+          <div class="g-b-text">
+            <div class="g-b-line">Your son adds at least 5 MPH to his fastball in 12 weeks — or his next month is free.</div>
+            <div class="g-b-sub">A written, no-fine-print promise from Coach Kyle Beard.</div>
+          </div>
+        </div>
+        <div class="g-b-checks">
+          <span class="g-b-check">No fine print</span>
+          <span class="g-b-check">No qualifiers</span>
+          <span class="g-b-check">No long-term contract</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">MLB First-Round Picks Developed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Years Coaching at the Pro Level</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Max Pitchers Per Group</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-eyebrow">Choose your path</div>
+    <h2 class="section-title">In-Person or Virtual.<br>Same standard. Same system.</h2>
+    <p class="section-lede">Whether you train on the field in Fort Lauderdale or work the program from anywhere in the country — every pitcher gets the same structured development built over 20+ years at the pro level.</p>
+    <div class="two-path">
+      <a href="in-person.html" class="path-card blue">
+        <div class="label">In-Person · Fort Lauderdale</div>
+        <h3>Train on the field</h3>
+        <p>Live mound work. Real velocity tracking. Weekly live at-bats. Youth through Pro.</p>
+        <div class="arrow">EXPLORE IN-PERSON →</div>
+      </a>
+      <a href="virtual.html" class="path-card">
+        <div class="label">Virtual · Anywhere</div>
+        <h3>Train from anywhere</h3>
+        <p>Video assessment, programming, weekly check-ins. Same system, anywhere.</p>
+        <div class="arrow">EXPLORE VIRTUAL →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>© <span id="yr">2026</span> PITCH3 · Fort Lauderdale, FL</div>
+    <div>
+      <a href="https://www.instagram.com/kb3_baseball/" target="_blank" rel="noopener">@kb3_baseball</a> ·
+      <a href="mailto:kyle@pitch3.com">kyle@pitch3.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
