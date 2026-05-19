@@ -54,13 +54,16 @@ button { font-family: inherit; cursor: pointer; }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); }
 .btn {
   display: inline-flex; align-items: center; gap: 6px;
-  background: var(--sky); color: var(--blue);
+  background: var(--ink); color: #fff;
   font-weight: 800; font-size: 14px; letter-spacing: .3px;
   padding: 11px 18px; border-radius: 6px;
   border: none; transition: background .15s, color .15s, transform .1s;
 }
-.btn:hover { background: var(--blue); color: #fff; }
+.btn:hover { background: #2a2a2a; }
 .btn:active { transform: translateY(1px); }
+/* Inverse on dark sections so the button still pops */
+.final-cta .btn { background: #fff; color: var(--ink); }
+.final-cta .btn:hover { background: #e8e8e8; }
 .btn-ghost {
   background: transparent; color: var(--ink);
   border: 1.5px solid var(--ink);
