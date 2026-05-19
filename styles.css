@@ -3,9 +3,10 @@
   --ink: #0a0a0a;
   --ink-soft: #4a4a4a;
   --ink-faint: #8a8a8a;
-  --blue: #0046ff;
-  --blue-dark: #0033cc;
-  --blue-tint: #eaf0ff;
+  --blue: #0a1733;        /* deep navy — primary */
+  --blue-dark: #050e22;   /* navy hover */
+  --sky: #4ea8ff;         /* sky blue — accent */
+  --blue-tint: #eaf2ff;
   --rule: #e6e6e6;
   --max: 1200px;
 }
@@ -41,7 +42,7 @@ button { font-family: inherit; cursor: pointer; }
 .brand {
   font-weight: 900; letter-spacing: -1px; font-size: 22px;
 }
-.brand span { color: var(--blue); }
+.brand span { color: var(--sky); }
 .nav-links {
   display: flex; align-items: center; gap: 28px;
   list-style: none; padding: 0; margin: 0;
@@ -82,7 +83,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .chip {
   display: inline-block;
-  background: var(--blue); color: #fff;
+  background: var(--sky); color: var(--blue);
   font-size: 11px; font-weight: 800; letter-spacing: 2px;
   padding: 6px 11px; border-radius: 4px;
   margin-bottom: 22px;
@@ -96,7 +97,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: -2.5px; margin: 0 0 18px;
   text-transform: uppercase;
 }
-.h1 .accent { color: var(--blue); }
+.h1 .accent { color: var(--sky); }
 .lede {
   font-size: 17px; color: var(--ink-soft);
   margin: 0 0 32px; max-width: 480px;
@@ -119,7 +120,7 @@ button { font-family: inherit; cursor: pointer; }
   content: "📷 PLACEHOLDER";
   position: absolute; top: 10px; left: 12px;
   font-size: 10px; letter-spacing: 1.5px;
-  color: var(--blue); font-weight: 800;
+  color: var(--sky); font-weight: 800;
 }
 .media-slot.wide { aspect-ratio: 16/9; }
 .media-slot.tall { aspect-ratio: 3/4; }
@@ -134,7 +135,7 @@ button { font-family: inherit; cursor: pointer; }
 .stat { text-align: left; }
 .stat-num {
   font-size: clamp(48px, 6vw, 72px);
-  font-weight: 900; color: var(--blue);
+  font-weight: 900; color: var(--sky);
   letter-spacing: -2px; line-height: 1;
 }
 .stat-label {
@@ -147,7 +148,7 @@ button { font-family: inherit; cursor: pointer; }
 .section { padding: 80px 0; border-bottom: 1px solid var(--rule); }
 .section-eyebrow {
   font-size: 12px; font-weight: 800; letter-spacing: 3px;
-  color: var(--blue); text-transform: uppercase;
+  color: var(--sky); text-transform: uppercase;
   margin-bottom: 12px;
 }
 .section-title {
@@ -164,12 +165,12 @@ button { font-family: inherit; cursor: pointer; }
 /* ===== TWO-PATH CARDS ===== */
 .two-path { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .path-card {
-  background: var(--ink); color: #fff;
+  background: var(--blue); color: #fff;
   padding: 40px; border-radius: 14px;
   transition: transform .15s, background .15s;
   display: block;
 }
-.path-card.blue { background: var(--blue); }
+.path-card.blue { background: var(--sky); color: var(--blue); }
 .path-card:hover { transform: translateY(-3px); }
 .path-card .label {
   font-size: 11px; letter-spacing: 3px; opacity: 0.7;
@@ -195,10 +196,10 @@ button { font-family: inherit; cursor: pointer; }
   transition: border-color .15s, transform .15s;
   display: flex; flex-direction: column;
 }
-.tier:hover { border-color: var(--blue); transform: translateY(-2px); }
+.tier:hover { border-color: var(--sky); transform: translateY(-2px); }
 .tier .age {
   font-size: 12px; font-weight: 700; letter-spacing: 2px;
-  color: var(--blue); text-transform: uppercase;
+  color: var(--sky); text-transform: uppercase;
 }
 .tier h3 {
   font-size: 26px; font-weight: 900;
@@ -220,7 +221,7 @@ button { font-family: inherit; cursor: pointer; }
 .tier li:last-child { border-bottom: none; }
 .tier li::before {
   content: "→ ";
-  color: var(--blue); font-weight: 800;
+  color: var(--sky); font-weight: 800;
 }
 
 /* ===== MLB STRIP ===== */
@@ -235,7 +236,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .mlb-pick {
   font-size: 48px; font-weight: 900;
-  color: var(--blue); letter-spacing: -2px;
+  color: var(--sky); letter-spacing: -2px;
   line-height: 1;
 }
 .mlb-pick-label {
@@ -285,7 +286,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .banner .dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--blue);
+  background: var(--sky);
   animation: pulse 1.6s ease-in-out infinite;
 }
 @keyframes pulse {
@@ -304,7 +305,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 18px;
 }
 .cred-chip .big {
-  font-size: 28px; font-weight: 900; color: var(--blue);
+  font-size: 28px; font-weight: 900; color: var(--sky);
   letter-spacing: -1px; line-height: 1;
 }
 .cred-chip .label {
@@ -337,7 +338,7 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center; flex-wrap: wrap; gap: 16px;
 }
 .footer a { color: var(--ink); font-weight: 600; }
-.footer a:hover { color: var(--blue); }
+.footer a:hover { color: var(--sky); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1023px) {

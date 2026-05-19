@@ -10,11 +10,11 @@ Hey — built this while you were AFK, per your "approve stuff and do as u recom
 - `in-person.html` — All 4 program tiers (Youth / Elite / College / Pro), weekly system, tech stack
 - `virtual.html` — "Now in Development · Inquire" framing + 5 tiers (Youth / Elite / College / Pro / **Strength Training**)
 - `about.html` — Coach Kyle bio, credentials, MLB-player social proof, quote
-- `styles.css` — Shared styles: white + black + electric royal blue (`#0046ff`), bold modern athletic
+- `styles.css` — Shared styles: white + deep navy (`#0a1733`) + sky blue accent (`#4ea8ff`), bold modern athletic
 - `docs/superpowers/specs/2026-05-18-pitch3-redesign-design.md` — Full design spec
 
 **Decisions I made on your behalf** (all reversible):
-- Style: **C1 Electric Royal Blue** (the "1" you wanted me to hit)
+- Style: **C3 Navy + Sky two-tone** (per your follow-up — deep navy anchor + sky blue accent)
 - Booking link: `mailto:kyle@pitch3.com` placeholders everywhere — easy swap to Calendly later
 - Domain: not bought; site will deploy to a Netlify subdomain for now
 - Voice: trimmed-down version of the existing site's copy (kept Kyle's tone, cut blog-style fluff)
@@ -41,7 +41,7 @@ Each placeholder is labeled. Here's the shopping list from `@kb3_baseball`:
 |---|---|
 | `ig-hero-pitcher` (home) | Best pitcher-in-delivery photo or short clip — your hero asset |
 | `ig-coach-kyle` (home) | Portrait of Coach Kyle, ideally action shot |
-| `ig-facility-session` (in-person) | Best in-action / facility session photo |
+| `ig-field-session` (in-person) | Best in-action / field session photo |
 | `ig-virtual-or-video` (virtual) | Remote training / video-call style asset (or a coaching breakdown clip) |
 | `ig-coach-portrait` (about) | Portrait of Kyle — mound or field |
 | `ig-with-mlb-player` (about) | Session photo with Sanabia or another MLB player |
