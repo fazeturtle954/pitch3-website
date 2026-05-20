@@ -496,3 +496,189 @@ button { font-family: inherit; cursor: pointer; }
   .stat-num { font-size: 44px; }
   .quote { padding: 40px 24px; }
 }
+
+/* ===== JOIN PAGE — pricing cards ===== */
+.join-pricing {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.join-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.join-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 36px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.join-card:hover {
+  border-color: var(--sky);
+  box-shadow: 0 18px 40px rgba(10, 23, 51, 0.10);
+  transform: translateY(-2px);
+}
+.join-card-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.join-card.featured {
+  border: 2px solid var(--sky);
+  background: linear-gradient(180deg, #ffffff 0%, var(--blue-tint) 100%);
+}
+.join-card.featured .join-card-eyebrow {
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.join-card.featured .join-card-eyebrow::before {
+  content: "★";
+  color: var(--sky);
+  font-size: 14px;
+}
+.join-card-price {
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.join-card-period {
+  font-size: 15px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.join-card-tagline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  min-height: 40px;
+}
+.join-card .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 18px;
+  font-size: 15px;
+}
+.join-card.featured .btn {
+  background: var(--blue);
+}
+.join-card.featured .btn:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 720px) {
+  .join-pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== JOIN PAGE — what's included ===== */
+.join-included {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.join-included-list {
+  max-width: 720px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+.join-included-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.join-included-list li::before {
+  content: "✓";
+  color: var(--sky);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ===== JOIN PAGE — FAQ ===== */
+.join-faq {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 22px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  list-style: none;
+  position: relative;
+  padding-right: 30px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 22px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--sky);
+  transition: transform .15s;
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 22px;
+  padding-right: 30px;
+}
+
+/* ===== JOIN SUCCESS PAGE ===== */
+.join-success-banner {
+  background: var(--blue-tint);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.join-success-banner h1 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  color: var(--blue);
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+}
+.join-success-banner p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.join-form-wrap {
+  padding: 50px 0 80px;
+  max-width: 720px;
+  margin: 0 auto;
+}
