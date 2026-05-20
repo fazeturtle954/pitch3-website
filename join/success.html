@@ -68,6 +68,21 @@
     + (email ? `&email=${encodeURIComponent(email)}` : '')
     + (plan ? `&plan=${encodeURIComponent(plan)}` : '');
   iframe.setAttribute('data-tally-src', finalSrc);
+
+  // Listen for Tally's submission event and redirect the PARENT window to our
+  // thanks page. Without this, Tally would only redirect within the iframe
+  // (which looks broken because the iframe has a fixed height).
+  window.addEventListener('message', function(event) {
+    if (!event.data || typeof event.data !== 'string') return;
+    try {
+      const data = JSON.parse(event.data);
+      if (data.event === 'Tally.FormSubmitted') {
+        window.location.href = 'thanks.html';
+      }
+    } catch (e) {
+      // Not a Tally message, ignore
+    }
+  });
 </script>
 
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
