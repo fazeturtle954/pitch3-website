@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to PITCH3 Virtual — One Last Step</title>
+<meta name="description" content="Payment confirmed. Tell us about your pitcher so Coach Kyle can build the first program.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="brand">PITCH<span>3</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../in-person.html">In-Person</a></li>
+      <li><a href="../virtual.html">Virtual</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="join-success-banner">
+  <div class="wrap">
+    <h1>✓ Payment confirmed.</h1>
+    <p>One last step — tell us about your pitcher so Coach Kyle can build the first program.</p>
+  </div>
+</section>
+
+<section class="join-form-wrap">
+  <div class="wrap">
+    <iframe
+      id="tally-embed"
+      data-tally-src="https://tally.so/embed/816Oex?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="1992"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="PITCH3 Virtual Program Intake"
+    ></iframe>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>© <span id="yr">2026</span> PITCH3 · Fort Lauderdale, FL</div>
+    <div>
+      <a href="mailto:kyle@pitch3.com">kyle@pitch3.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Pass through email and plan from Stripe redirect URL (in case Tally fields are
+  // configured to pre-fill from these parameters). Harmless if they aren't.
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get('email') || '';
+  const plan = params.get('plan') || '';
+  const iframe = document.getElementById('tally-embed');
+  const baseSrc = iframe.getAttribute('data-tally-src');
+  const finalSrc = baseSrc
+    + (email ? `&email=${encodeURIComponent(email)}` : '')
+    + (plan ? `&plan=${encodeURIComponent(plan)}` : '');
+  iframe.setAttribute('data-tally-src', finalSrc);
+</script>
+
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+</body>
+</html>
