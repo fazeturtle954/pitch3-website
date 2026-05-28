@@ -1,6 +1,6 @@
 # PITCH3 Virtual Program — Coach Kyle's Playbook
 
-**Last updated:** 2026-05-20
+**Last updated:** 2026-05-27
 **Audience:** Coach Kyle Beard (running the virtual program day-to-day)
 
 ---
@@ -11,14 +11,28 @@ You're the coaching brain. Michael set up the website, payment system, and intak
 
 ---
 
-## The four tools you'll use
+## The three tools you'll use
 
 | Tool | What it does | Where to find it |
 |---|---|---|
-| **Email** | Where you get alerts when new clients sign up | Whatever inbox Michael set up for notifications |
-| **Google Sheet** ("PITCH3 Clients") | The master list of every paying client + their info | Google Drive → "PITCH3 Clients" |
-| **TrueCoach** | The actual coaching app — programs, messaging, video review | https://truecoach.co — login Michael gave you |
-| **Stripe Dashboard** | Where to handle refunds, billing questions, cancellations | https://dashboard.stripe.com — login Michael gave you (only needed occasionally) |
+| **Gmail** (pitch3program@gmail.com) | Where you get alerts when new clients sign up | https://mail.google.com — sign in with pitch3program@gmail.com |
+| **Google Sheet** ("PITCH3 Clients") | The master list of every paying client + their info | Sign into pitch3program@gmail.com → Google Drive → "PITCH3 Clients" |
+| **TrueCoach** | The actual coaching app — programs, messaging, video review | https://truecoach.co — **create your own account** (see Logins below) |
+
+> **Stripe:** Michael handles all Stripe stuff (billing, refunds, cancellations). You don't need a Stripe login. When something Stripe-related comes up, just email Michael — see "Special Situations" below.
+
+---
+
+## Your logins
+
+| Account | Username | Password |
+|---|---|---|
+| **Gmail / Google Drive** | pitch3program@gmail.com | Michael will send this to you separately (not stored here for security) |
+| **TrueCoach** | (you create this) | (you create this) |
+
+**TrueCoach:** Go to https://truecoach.co and sign up for your own coach account using whatever email you want (your personal one is fine). The subscription is on you / however you and Michael work it out — but the account is yours so it stays with you. Once you're set up, tell Michael your TrueCoach username so he can point clients toward it.
+
+**Gmail / Sheets:** The pitch3program@gmail.com account is the shared "program inbox" — that's where Stripe sends new-client alerts AND where the master Google Sheet lives (in that account's Google Drive). Michael will send the password separately.
 
 ---
 
@@ -198,21 +212,21 @@ For each active client, take a quick look at their program adherence:
 ### Client wants to cancel (Monthly plan)
 
 1. Monthly clients can self-cancel through Stripe's customer portal — they got the link in their Stripe receipt
-2. If they email you instead → reply with: "No problem. Open your most recent receipt email from Stripe and click 'Manage subscription' → 'Cancel.' Or I can do it for you — let me know."
-3. If you cancel for them: log into Stripe Dashboard → Customers → find them → Cancel subscription
+2. If they email you instead → reply with: "No problem. Open your most recent receipt email from Stripe and click 'Manage subscription' → 'Cancel.' If you can't find it, let me know and I'll get you sorted."
+3. If they still can't cancel themselves → **email Michael** with the parent's name + email. Michael handles Stripe and will cancel it on his end.
 4. Update Google Sheet status → **"Cancelled"**
 5. Send a kind farewell message in TrueCoach: "Best of luck, glad we got to work together, door is always open."
 
 ### Client wants a refund (Prepay)
 
-1. Use your judgment. Reasons we'd refund:
+1. Use your judgment on whether the refund is warranted. Reasons we'd refund:
    - Injury that's going to take months to heal (refund prorated remaining weeks)
    - Family crisis / can't continue
    - We're not delivering value (rare — but if so, refund and learn from it)
 2. Reasons we wouldn't refund:
    - "Changed my mind" 3 weeks in
    - Not putting in the work and blaming the program
-3. If you decide to refund: log into Stripe → Payments → find the charge → "Refund payment" → enter the prorated amount → Refund
+3. If you decide to refund: **email Michael** with the parent's name, email, and the refund amount (e.g. "Refund $X to [parent], we agreed to prorate the remaining 6 weeks"). Michael processes it in Stripe.
 4. Update Google Sheet status → **"Cancelled"**
 
 ### Parent emails with a pre-purchase question (hasn't signed up yet)
