@@ -7,19 +7,18 @@
 
 ## What this document is
 
-You're the coaching brain. Michael set up the website, payment system, and intake form — your job is everything that happens AFTER a parent signs up. This document walks you through exactly what to do, step by step. Read it once, then keep it as a reference.
+You're the coach AND the business owner — Pitch 3 is yours. Michael built the website and intake form for you as a launch favor; the program itself — clients, coaching, payments — runs through your accounts. This document walks you through exactly what to do, step by step. Read it once, then keep it as a reference.
 
 ---
 
-## The three tools you'll use
+## The four tools you'll use
 
 | Tool | What it does | Where to find it |
 |---|---|---|
 | **Gmail** (pitch3program@gmail.com) | Where you get alerts when new clients sign up | https://mail.google.com — sign in with pitch3program@gmail.com |
 | **Google Sheet** ("PITCH3 Clients") | The master list of every paying client + their info | Sign into pitch3program@gmail.com → Google Drive → "PITCH3 Clients" |
-| **TrueCoach** | The actual coaching app — programs, messaging, video review | https://truecoach.co — **create your own account** (see Logins below) |
-
-> **Stripe:** Michael handles all Stripe stuff (billing, refunds, cancellations). You don't need a Stripe login. When something Stripe-related comes up, just email Michael — see "Special Situations" below.
+| **TrueCoach** | The coaching app — programs, messaging, video review | https://truecoach.co — **create your own account** (see Logins below) |
+| **Stripe** | Where payments land + where you handle refunds, cancellations, billing | https://dashboard.stripe.com — **your own Stripe account** (Michael will help you set it up — see ONE-TIME SETUP below) |
 
 ---
 
@@ -29,10 +28,13 @@ You're the coaching brain. Michael set up the website, payment system, and intak
 |---|---|---|
 | **Gmail / Google Drive** | pitch3program@gmail.com | Michael will send this to you separately (not stored here for security) |
 | **TrueCoach** | (you create this) | (you create this) |
+| **Stripe** | (you create this — use pitch3program@gmail.com as the account email) | (you create this) |
 
-**TrueCoach:** Go to https://truecoach.co and sign up for your own coach account using whatever email you want (your personal one is fine). The subscription is on you / however you and Michael work it out — but the account is yours so it stays with you. Once you're set up, tell Michael your TrueCoach username so he can point clients toward it.
+**Gmail / Sheets:** The pitch3program@gmail.com account is the program inbox — that's where new-client alerts AND the master Google Sheet live. Michael will send the password separately.
 
-**Gmail / Sheets:** The pitch3program@gmail.com account is the shared "program inbox" — that's where Stripe sends new-client alerts AND where the master Google Sheet lives (in that account's Google Drive). Michael will send the password separately.
+**TrueCoach:** Sign up for your own coach account at https://truecoach.co using whatever email you want (personal is fine). The account is yours so it stays with you no matter what. Once you're set up, tell Michael your TrueCoach username.
+
+**Stripe:** Pitch 3 is your business — payments need to land in YOUR bank account. You and Michael will set this up together in one session (~45 min). See **ONE-TIME SETUP → Set up your Stripe account** below for the full walkthrough.
 
 ---
 
@@ -54,6 +56,29 @@ You're the coaching brain. Michael set up the website, payment system, and intak
 ---
 
 ## ONE-TIME SETUP (do this before any clients arrive)
+
+### Set up your Stripe account (with Michael) — do this FIRST
+
+Pitch 3 is your business, so every payment from pitch3.com needs to land in YOUR bank account, not Michael's. Plan to sit down with Michael for ~45 minutes and knock this out in one shot.
+
+**Bring with you:**
+- Your SSN (or EIN if you have an LLC)
+- Your bank account info (routing + account number) — Stripe needs this to send you payouts
+- Your driver's license for ID verification
+- Your phone (Stripe will text you a verification code)
+
+**What happens in the session:**
+1. Go to https://stripe.com → "Start now." **Use `pitch3program@gmail.com` as the Stripe account email** so all Stripe notification emails land in the program inbox you're already checking.
+2. Set whatever Stripe password you want (doesn't need to match Gmail's). Save it somewhere safe.
+3. Enter your business info, bank account, SSN/EIN, and verify your ID. Stripe activates the account — usually instant, sometimes up to a day.
+4. Michael creates the two products in your Stripe (Monthly subscription + 12-Week prepay) and generates the two Payment Link URLs.
+5. Michael swaps those URLs into pitch3.com and pushes the change.
+6. You and Michael do a $1 test purchase together to confirm the money lands in your Stripe → your bank.
+7. Refund the test charge.
+
+After this, every payment from pitch3.com flows into YOUR Stripe → YOUR bank, and you handle all refunds/cancellations yourself from https://dashboard.stripe.com.
+
+---
 
 ### Build your starter program library in TrueCoach
 
@@ -207,13 +232,13 @@ For each active client, take a quick look at their program adherence:
 2. If serious → recommend they see a doctor / PT. **Don't try to diagnose medical issues over text.**
 3. In TrueCoach, **pause their program** (or replace with a return-to-throwing protocol if it's minor)
 4. In the Google Sheet, change Status → **"Paused"**
-5. Email Michael — he might want to pause their Stripe billing while they recover (so they're not paying for nothing)
+5. Pause their Stripe subscription so they're not paying while they recover: Stripe Dashboard → Customers → find them → Subscriptions → **Pause**. Resume it when they're cleared to throw again.
 
 ### Client wants to cancel (Monthly plan)
 
 1. Monthly clients can self-cancel through Stripe's customer portal — they got the link in their Stripe receipt
 2. If they email you instead → reply with: "No problem. Open your most recent receipt email from Stripe and click 'Manage subscription' → 'Cancel.' If you can't find it, let me know and I'll get you sorted."
-3. If they still can't cancel themselves → **email Michael** with the parent's name + email. Michael handles Stripe and will cancel it on his end.
+3. If they still can't cancel themselves → cancel it for them: Stripe Dashboard → Customers → find them → Subscriptions → **Cancel subscription**.
 4. Update Google Sheet status → **"Cancelled"**
 5. Send a kind farewell message in TrueCoach: "Best of luck, glad we got to work together, door is always open."
 
@@ -226,7 +251,7 @@ For each active client, take a quick look at their program adherence:
 2. Reasons we wouldn't refund:
    - "Changed my mind" 3 weeks in
    - Not putting in the work and blaming the program
-3. If you decide to refund: **email Michael** with the parent's name, email, and the refund amount (e.g. "Refund $X to [parent], we agreed to prorate the remaining 6 weeks"). Michael processes it in Stripe.
+3. If you decide to refund: Stripe Dashboard → Payments → find the charge → **Refund payment** → enter the prorated amount → Refund.
 4. Update Google Sheet status → **"Cancelled"**
 
 ### Parent emails with a pre-purchase question (hasn't signed up yet)
@@ -240,7 +265,7 @@ Just answer it like a normal sales conversation. If they're a good fit, point th
 
 ### Something else weird happened
 
-Email Michael. Don't try to fix anything in Stripe or the website yourself unless you're sure — call him first.
+For **website** issues (pitch3.com is down, signup button broken, Payment Link not working) → email Michael. For **Stripe** stuff you can poke around your dashboard yourself, but if you're about to do something big or irreversible (huge refund, deleting a customer, changing your bank account), ping Michael first.
 
 ---
 
@@ -270,10 +295,11 @@ That's it. ~30–60 min of work daily once you're at 5–10 clients.
 
 Anything I haven't covered? Stuff that's NOT in this doc but you wonder about:
 
-- "How do I check who's paid this month?" → Ask Michael, he'll show you in Stripe
-- "Can we automate [X]?" → Probably yes, ask Michael
-- "Is there a way to do [Y]?" → Ask Michael — he handles all the tech
+- "How do I check who's paid this month?" → Your Stripe Dashboard → **Payments**. Use the date filter at the top to filter by month. Total revenue is at the top.
+- "How do I see all my active subscriptions?" → Stripe Dashboard → **Subscriptions** → filter by "Active."
+- "Can we automate [X] on the website?" → Probably yes, ask Michael
+- "Is there a way to do [Y] on the website?" → Ask Michael — he handles the site
 
-You handle pitching. He handles software. That's the deal.
+You handle pitching, clients, and Stripe (it's your business). Michael handles pitch3.com. That's the deal.
 
 — PITCH3, 2026
