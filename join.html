@@ -6,6 +6,7 @@
 <title>Join the Virtual Program — PITCH3</title>
 <meta name="description" content="Personalized daily throwing, arm care, and strength programming from PITCH3 — diagnosed personally, delivered every morning. $150/mo or $397 for 12 weeks.">
 <link rel="stylesheet" href="styles.css">
+<script src="assets/pixel.js"></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
       <li><a href="join.html" class="active">Join Program</a></li>
       <li><a href="in-person.html">In-Person</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request">Book a Free Call</a></li>
+      <li><a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request" onclick="PITCH3.track('Lead')">Book a Free Call</a></li>
     </ul>
   </div>
 </nav>
@@ -74,7 +75,7 @@
         <div class="join-card-price">$150<span style="font-size: 26px; color: var(--ink); font-weight: 800; letter-spacing: -0.5px;">/mo</span></div>
         <div class="join-card-period">Cancel anytime</div>
         <div class="join-card-tagline">Best if you want to try the program month-to-month before committing.</div>
-        <a class="btn" href="https://buy.stripe.com/fZu00j0133wD9J8e8A67S03">Start Monthly →</a>
+        <a class="btn" href="https://buy.stripe.com/fZu00j0133wD9J8e8A67S03" onclick="PITCH3.track('InitiateCheckout', {currency:'USD', value:150})">Start Monthly →</a>
       </div>
 
       <div class="join-card featured">
@@ -82,7 +83,7 @@
         <div class="join-card-price">$397<span style="font-size: 26px; color: var(--ink); font-weight: 800; letter-spacing: -0.5px;"> / 12 wks</span></div>
         <div class="join-card-period">One payment · Save $53</div>
         <div class="join-card-tagline">Best for serious players ready to commit to a full 12-week development cycle.</div>
-        <a class="btn" href="https://buy.stripe.com/8x27sL9BDgjp8F45C467S04">Start 12 Weeks →</a>
+        <a class="btn" href="https://buy.stripe.com/8x27sL9BDgjp8F45C467S04" onclick="PITCH3.track('InitiateCheckout', {currency:'USD', value:397})">Start 12 Weeks →</a>
       </div>
 
     </div>
@@ -172,7 +173,7 @@
   <div class="wrap">
     <h2>Not sure yet?</h2>
     <p>Book a free 15-minute call. Bring every question. No pressure.</p>
-    <a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request">Book a Free Call →</a>
+    <a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request" onclick="PITCH3.track('Lead')">Book a Free Call →</a>
   </div>
 </section>
 
