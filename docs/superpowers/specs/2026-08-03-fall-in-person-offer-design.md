@@ -40,6 +40,12 @@ In-person path card `<p>` → "Unlimited lessons, 7 days a week. Fall enrollment
 - Open locally, click through all pages desktop + mobile-nav widths; confirm `#pricing` anchor, pixel wiring, and that virtual pages are untouched.
 - Commit and push (auto-deploy to GitHub Pages per standing rule).
 
-## Follow-up (post-launch, not in scope)
+## Amendment — 2026-08-03 (same day, approved by Michael)
 
-- Kyle creates the $500/mo Stripe subscription payment link → swap the placeholder href (one line).
+Supersedes the pricing/checkout sections above:
+
+- **No price on the page.** All $500/mo mentions removed (meta, hero CTA, card, final CTA, home card). Price is discussed when Kyle talks to the family. Unlimited/flexible/fall framing stays.
+- **Pricing card → lead form** (`id="start"`): player's name, age (under 18 reveals a required parent's-name field), "What do you want to improve?" checkboxes (Velocity, Playing time, Pitch design, Command, Arm health, Overall development), optional notes.
+- **Submit = text to Kyle's cell (954) 309-9946:** the button builds an `sms:` link with the form contents so the parent's Messages app opens pre-filled — they hit send, Kyle receives it from their own number and calls back. No form backend needed. Desktop fallback: call/text number shown under the button. Fires the `Lead` pixel event.
+- **In-person page email CTAs → call/text:** nav button, hero secondary CTA, and final CTA now use `tel:`/`sms:` links instead of `mailto:kyle@pitch3.com` (inbox never confirmed real; Kyle wants leads on his phone). Footer + other pages' mailtos: site-wide decision deferred.
+- Stripe follow-up is dropped — no checkout on the site for in-person.

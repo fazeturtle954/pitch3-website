@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>In-Person Training — PITCH3</title>
-<meta name="description" content="Unlimited small-group in-person pitching training in Fort Lauderdale. $500/mo, flexible scheduling 7 days a week.">
+<meta name="description" content="Unlimited small-group in-person pitching training in Fort Lauderdale. Flexible scheduling 7 days a week. Text Kyle to get started.">
 <link rel="stylesheet" href="styles.css">
 <script src="assets/pixel.js"></script>
 </head>
@@ -19,7 +19,7 @@
       <li><a href="join.html">Join Program</a></li>
       <li><a href="in-person.html" class="active">In-Person</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a class="btn" href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request">Book a Free Call</a></li>
+      <li><a class="btn" href="tel:+19543099946" onclick="PITCH3.track('Lead', {content_name: 'in-person-nav-call'})">Call Kyle</a></li>
     </ul>
   </div>
 </nav>
@@ -31,8 +31,8 @@
       <h1 class="h1">Train on the<br><span class="accent">field.</span></h1>
       <p class="lede">Unlimited in-person lessons for one flat rate. Come to the field as often as you want — flexible times, 7 days a week, weekends included. Small groups, live coaching, real velocity tracking every session.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#pricing">Join Unlimited — $500/mo</a>
-        <a class="btn btn-ghost" href="mailto:kyle@pitch3.com?subject=In-Person%20Inquiry">Book a Free Call →</a>
+        <a class="btn" href="#start">Tell Kyle What You're Working On →</a>
+        <a class="btn btn-ghost" href="tel:+19543099946" onclick="PITCH3.track('Lead', {content_name: 'in-person-hero-call'})">Call (954) 309-9946</a>
       </div>
     </div>
     <a class="media-link" href="https://www.instagram.com/kb3_baseball/" target="_blank" rel="noopener" data-ig-slot="field-session">
@@ -41,30 +41,41 @@
   </div>
 </header>
 
-<section id="pricing" class="join-pricing">
+<section id="start" class="join-pricing">
   <div class="wrap">
-    <div class="section-eyebrow" style="text-align:center;">Fall Membership</div>
-    <h2 class="section-title" style="text-align:center;">One membership.<br>Unlimited lessons.</h2>
-    <div class="join-pricing-grid" style="margin-top: 50px; grid-template-columns: 1fr; max-width: 440px;">
+    <div class="section-eyebrow" style="text-align:center;">Get Started</div>
+    <h2 class="section-title" style="text-align:center;">Tell Kyle what<br>you're working on.</h2>
+    <p class="section-lede" style="text-align:center; margin-left:auto; margin-right:auto;">Fill this out and it goes straight to Kyle's phone as a text. He reads every one and calls back personally to figure out the right plan for your son.</p>
+    <p class="guarantee-line" style="text-align:center; margin-top: 26px; margin-bottom: 0;">+5 MPH in 12 weeks — or his next month is free.</p>
 
-      <div class="join-card featured">
-        <div class="join-card-eyebrow">UNLIMITED</div>
-        <div class="join-card-price">$500<span style="font-size: 26px; color: var(--ink); font-weight: 800; letter-spacing: -0.5px;">/mo</span></div>
-        <div class="join-card-period">Cancel anytime</div>
-        <div class="join-card-tagline">Unlimited lessons on the field, all fall. Train every day if you want — your rate never changes.</div>
-        <!-- SWAP: replace this mailto href with Kyle's $500/mo Stripe subscription payment link when it exists -->
-        <a class="btn" href="mailto:kyle@pitch3.com?subject=Join%20Unlimited%20%E2%80%94%20%24500%2Fmo" onclick="PITCH3.track('InitiateCheckout', {currency:'USD', value:500})">Join Unlimited →</a>
+    <form id="kyle-form" class="lead-form" onsubmit="return sendToKyle(event)">
+      <label for="f-name">Player's name</label>
+      <input type="text" id="f-name" name="player" autocomplete="name" required>
+
+      <label for="f-age">Player's age</label>
+      <input type="number" id="f-age" name="age" min="6" max="40" inputmode="numeric" required>
+
+      <div id="f-parent-wrap" hidden>
+        <label for="f-parent">Parent's name</label>
+        <input type="text" id="f-parent" name="parent">
       </div>
 
-    </div>
-    <ul class="join-included-list" style="margin-top: 46px; max-width: 560px;">
-      <li>Unlimited in-person lessons — no session counting</li>
-      <li>Train any day of the week, weekends included</li>
-      <li>Times flexed around school and games — scheduling handled personally</li>
-      <li>Small-group sessions on the field</li>
-      <li>PitchLab velocity &amp; pitch tracking every session</li>
-    </ul>
-    <p class="guarantee-line" style="text-align:center; margin-top: 36px; margin-bottom: 0;">+5 MPH in 12 weeks — or his next month is free.</p>
+      <label>What does he want to improve?</label>
+      <div class="improve-grid">
+        <label><input type="checkbox" value="Velocity"> Velocity</label>
+        <label><input type="checkbox" value="Playing time"> Playing time</label>
+        <label><input type="checkbox" value="Pitch design"> Pitch design</label>
+        <label><input type="checkbox" value="Command"> Command</label>
+        <label><input type="checkbox" value="Arm health"> Arm health</label>
+        <label><input type="checkbox" value="Overall development"> Overall development</label>
+      </div>
+
+      <label for="f-notes">Anything else Kyle should know? <span style="font-weight:600; letter-spacing:0; text-transform:none;">(optional)</span></label>
+      <textarea id="f-notes" name="notes" rows="3"></textarea>
+
+      <button class="btn" type="submit">Text Kyle →</button>
+      <p class="form-sub">Opens your Messages app — you hit send. Or reach Kyle directly: <a href="sms:+19543099946">text</a> or <a href="tel:+19543099946">call (954) 309-9946</a>.</p>
+    </form>
   </div>
 </section>
 
@@ -90,7 +101,7 @@
     </div>
 
     <div style="text-align:center; margin-top: 40px;">
-      <a class="btn" href="#pricing">Join Unlimited — $500/mo</a>
+      <a class="btn" href="#start">Tell Kyle What You're Working On →</a>
     </div>
   </div>
 </section>
@@ -142,9 +153,9 @@
 <section class="final-cta">
   <div class="wrap">
     <h2>Lock in your fall spot.</h2>
-    <p>Fall spots are limited — small groups fill fast. Join today or grab a free call first.</p>
-    <a class="btn" href="#pricing">Join Unlimited — $500/mo</a>
-    <p style="margin-top: 18px; margin-bottom: 0;"><a href="mailto:kyle@pitch3.com?subject=Free%20Call%20Request" style="color: #fff; text-decoration: underline; font-weight: 600;">or book a free call first →</a></p>
+    <p>Fall spots are limited — small groups fill fast. Tell Kyle what you're working on and he'll take it from there.</p>
+    <a class="btn" href="#start">Text Kyle →</a>
+    <p style="margin-top: 18px; margin-bottom: 0;"><a href="tel:+19543099946" onclick="PITCH3.track('Lead', {content_name: 'in-person-footer-call'})" style="color: #fff; text-decoration: underline; font-weight: 600;">or call (954) 309-9946 →</a></p>
   </div>
 </section>
 
@@ -158,6 +169,34 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+document.getElementById('f-age').addEventListener('input', function () {
+  var underage = this.value !== '' && Number(this.value) < 18;
+  document.getElementById('f-parent-wrap').hidden = !underage;
+  document.getElementById('f-parent').required = underage;
+});
+
+function sendToKyle(e) {
+  e.preventDefault();
+  var name = document.getElementById('f-name').value.trim();
+  var age = document.getElementById('f-age').value.trim();
+  var parent = document.getElementById('f-parent').value.trim();
+  var checked = document.querySelectorAll('#kyle-form .improve-grid input:checked');
+  var improve = Array.prototype.map.call(checked, function (b) { return b.value; }).join(', ');
+  var notes = document.getElementById('f-notes').value.trim();
+
+  var lines = ['Hi Kyle — new PITCH3 inquiry.', 'Player: ' + name + ' (age ' + age + ')'];
+  if (parent) lines.push('Parent: ' + parent);
+  if (improve) lines.push('Wants to improve: ' + improve);
+  if (notes) lines.push('Notes: ' + notes);
+
+  PITCH3.track('Lead', {content_name: 'in-person-form-text'});
+  // ?& body quirk keeps the prefilled text working on both iOS and Android
+  window.location.href = 'sms:+19543099946?&body=' + encodeURIComponent(lines.join('\n'));
+  return false;
+}
+</script>
 </body>
 </html>
