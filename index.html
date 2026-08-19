@@ -119,17 +119,41 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap coach">
-    <a class="media-link" href="https://www.instagram.com/kb3_baseball/" target="_blank" rel="noopener" data-ig-slot="coach-kyle">
-      <img class="media tall" src="assets/coach-kyle.jpg" alt="PITCH3 head coach on the field">
-    </a>
-    <div>
-      <div class="section-eyebrow">The Head Coach</div>
-      <h2 class="section-title">The coach behind the system.</h2>
-      <p class="lede">20+ years developing pitchers at every level — from Little League to the Major Leagues. Head of the Fort Lauderdale Wahoos. Three MLB First-Round Picks built right here in South Florida.</p>
-      <a class="btn btn-ghost" href="about.html">Read the Full Story →</a>
-    </div>
+<section id="start" class="join-pricing">
+  <div class="wrap">
+    <div class="section-eyebrow" style="text-align:center;">Get Started</div>
+    <h2 class="section-title" style="text-align:center;">Tell us what<br>you're working on.</h2>
+    <p class="section-lede" style="text-align:center; margin-left:auto; margin-right:auto;">Fill this out and it goes straight to a PITCH3 coach as a text. We read every one and call back personally to figure out the right plan for your son.</p>
+    <p class="guarantee-line" style="text-align:center; margin-top: 26px; margin-bottom: 0;">+5 MPH in 12 weeks — or his next month is free.</p>
+
+    <form id="lead-form" class="lead-form" onsubmit="return sendLeadText(event)">
+      <label for="f-name">Player's name</label>
+      <input type="text" id="f-name" name="player" autocomplete="name" required>
+
+      <label for="f-age">Player's age</label>
+      <input type="number" id="f-age" name="age" min="6" max="40" inputmode="numeric" required>
+
+      <div id="f-parent-wrap" hidden>
+        <label for="f-parent">Parent's name</label>
+        <input type="text" id="f-parent" name="parent">
+      </div>
+
+      <label>What does he want to improve?</label>
+      <div class="improve-grid">
+        <label><input type="checkbox" value="Velocity"> Velocity</label>
+        <label><input type="checkbox" value="Playing time"> Playing time</label>
+        <label><input type="checkbox" value="Pitch design"> Pitch design</label>
+        <label><input type="checkbox" value="Command"> Command</label>
+        <label><input type="checkbox" value="Arm health"> Arm health</label>
+        <label><input type="checkbox" value="Overall development"> Overall development</label>
+      </div>
+
+      <label for="f-notes">Anything else we should know? <span style="font-weight:600; letter-spacing:0; text-transform:none;">(optional)</span></label>
+      <textarea id="f-notes" name="notes" rows="3"></textarea>
+
+      <button class="btn" type="submit">Text PITCH3 →</button>
+      <p class="form-sub">Opens your Messages app — you hit send. Or text us directly: <a href="sms:+19543099946?&amp;body=Hi%20PITCH3%20%E2%80%94%20interested%20in%20in-person%20training.">(954) 309-9946</a>.</p>
+    </form>
   </div>
 </section>
 
@@ -160,6 +184,34 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+document.getElementById('f-age').addEventListener('input', function () {
+  var underage = this.value !== '' && Number(this.value) < 18;
+  document.getElementById('f-parent-wrap').hidden = !underage;
+  document.getElementById('f-parent').required = underage;
+});
+
+function sendLeadText(e) {
+  e.preventDefault();
+  var name = document.getElementById('f-name').value.trim();
+  var age = document.getElementById('f-age').value.trim();
+  var parent = document.getElementById('f-parent').value.trim();
+  var checked = document.querySelectorAll('#lead-form .improve-grid input:checked');
+  var improve = Array.prototype.map.call(checked, function (b) { return b.value; }).join(', ');
+  var notes = document.getElementById('f-notes').value.trim();
+
+  var lines = ['New PITCH3 training inquiry.', 'Player: ' + name + ' (age ' + age + ')'];
+  if (parent) lines.push('Parent: ' + parent);
+  if (improve) lines.push('Wants to improve: ' + improve);
+  if (notes) lines.push('Notes: ' + notes);
+
+  PITCH3.track('Lead', {content_name: 'home-form-text'});
+  // ?& body quirk keeps the prefilled text working on both iOS and Android
+  window.location.href = 'sms:+19543099946?&body=' + encodeURIComponent(lines.join('\n'));
+  return false;
+}
+</script>
 </body>
 </html>
